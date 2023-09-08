@@ -29,6 +29,90 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+
+    <style>
+
+
+        /* .bottom-right-badge {
+        position: absolute;
+        top: 150px; 
+        right: 80px; 
+        width: auto; 
+        height: 80px; 
+        opacity: 0.7; 
+
+    } */
+
+
+
+    .green-div-nav {
+      background-color: #4CAF50; 
+      color: #fff; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      height: 25px; 
+  }
+
+  
+  .green-div-nav h1 {
+      font-size: 15px; 
+      margin: 0; 
+  }
+
+
+  .green-div {
+    background-color: #4CAF50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: relative; 
+}
+
+
+.green-div h5 {
+    font-size: 15px; 
+    margin: 0;
+    color: white;
+}
+
+.top-image {
+    position: left;
+    top: 30; 
+    left: 50%; 
+    transform: translateY(-40%); 
+    height: 80px;
+}
+
+
+.blink-text {
+        font-size: 20px;
+        animation: blink 2s infinite; 
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    .underlined-link {
+        text-decoration: underline; /* Add an underline to the link */
+        color: blue; /* Set the link color (you can adjust the color as needed) */
+    }
+
+    </style>
 </head>
 
 <body>
@@ -39,6 +123,20 @@
     <!-- Spinner End -->
 
 
+
+    <!-- admission is ongoing -->
+    <!-- admission ongoing -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="green-div-nav">
+                    <h1 class="blink-text px-2">Admission is Ongoing.</h1> <span><a href="" class="underlined-link">Apply Now</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- admission ongoing -->
+    <!-- admission is ongoing -->
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark text-light p-0">
         <div class="row gx-0 d-none d-lg-flex">
@@ -123,7 +221,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                
                 </div>
                 <div class="carousel-item">
                     <img class="w-100" src="img/school-1.jpg" alt="Image">
@@ -139,6 +237,13 @@
                         </div>
                     </div>
                 </div>
+                
+
+
+                <!-- <img  class="bottom-right-badge" src="./img/nuc-logo.webp" alt="Bottom Right Image"> -->
+
+
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="prev">
@@ -212,6 +317,18 @@
     </div>
     <!-- Facts End -->
 
+    <!-- nuc licensed -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="green-div">
+                    <img class="top-image px-3" src="./img/nuc-logo.webp" alt="Top Image">
+                    <h5>Phoneix University is National University Commission licensed.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nuc licensed -->
 
     <!-- About Start -->
     <div class="container-xxl py-6">
@@ -718,6 +835,26 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var stickyDiv = $('#sticky-div');
+            var stickyOffset = stickyDiv.offset().top;
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() >= stickyOffset) {
+                    stickyDiv.addClass('sticky');
+                } else {
+                    stickyDiv.removeClass('sticky');
+                }
+            });
+        });
+    </script>
+
+
+
 </body>
 
 </html>
